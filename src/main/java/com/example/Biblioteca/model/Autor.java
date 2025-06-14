@@ -9,6 +9,7 @@ import java.util.List;
 
 @Entity
 @Data
+@Table(name = "autor")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -30,5 +31,10 @@ public class Autor {
     private List<Livro> livrosComoCoautor = new ArrayList<>();
 
     @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "logradouro", column = @Column(name = "logradouro")),
+            @AttributeOverride(name = "cidade", column = @Column(name = "cidade")),
+            @AttributeOverride(name = "pais", column = @Column(name = "pais"))
+    })
     private Endereco endereco;
 }

@@ -10,6 +10,7 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name = "usuario")
 @AllArgsConstructor
 @Builder
 public class Usuario {

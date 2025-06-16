@@ -1,4 +1,3 @@
-// Usuario.java
 package com.example.Biblioteca.model;
 
 import jakarta.persistence.*;
@@ -20,6 +19,7 @@ public class Usuario {
 
     private String nome;
     private String email;
+    private String senha;
 
     @OneToMany(mappedBy = "usuario")
     @Builder.Default
